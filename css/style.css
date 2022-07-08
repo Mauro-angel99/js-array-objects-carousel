@@ -1,6 +1,6 @@
 #gallery {
-    height: 500px;
-    width: 800px;
+    height: 700px;
+    width: 1000px;
     position: relative;
 }
 
@@ -12,6 +12,8 @@
 }
 
 #image {
+    height: 100%;
+    width: 100%;
     display: none;
 
 }
