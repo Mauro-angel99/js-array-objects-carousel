@@ -34,5 +34,53 @@ const images = [
 ];
 
 
+const gallery = document.getElementById(`gallery`)
+
+let sorce = ``
+
+for (let i = 0; i < images.length; i++) {
+    sorce += `<div id="image"><h2>${images[i].title}</h2><img src="${images[i].url}" alt=""><p>${images[i].description}</p></div>`
+}
+
+gallery.innerHTML = sorce
+
+
+const prev = document.getElementById(`prev`)
+const next = document.getElementById(`next`)
+
+let image = document.querySelectorAll(`#image`)
+
+let active = 0
+
+image[active].classList.add(`active`)
+
+next.addEventListener(`click`, function () {
+    image[active].classList.remove(`active`)
+
+    active++
+
+
+    if (active === image.length) {
+        active = 0
+    }
+
+
+    image[active].classList.add(`active`)
+
+})
+
+prev.addEventListener(`click`, function () {
+    image[active].classList.remove(`active`)
+
+    active--
+
+    if (active < 0) {
+        active = image.length - 1
+    }
+
+
+    image[active].classList.add(`active`)
+})
+
 
 

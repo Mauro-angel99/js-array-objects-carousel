@@ -1,6 +1,6 @@
 #gallery {
-    height: 650px;
-    width: 1000px;
+    height: 500px;
+    width: 800px;
     position: relative;
 }
 
@@ -9,7 +9,11 @@
     width: 100%;
     object-fit: cover;
     border-radius: 20px;
-    /* display: none; */
+}
+
+#image {
+    display: none;
+
 }
 
 #gallery .active {
